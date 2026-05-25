@@ -132,21 +132,21 @@ nav a:hover{
   transform:translateY(-10px);
 }
 
-/* FOTO CARD KECIL BANGET */
+/* FOTO CARD SUPER KECIL */
 
 .card img{
 
-  width:90px;
+  width:60px !important;
 
-  height:70px;
+  height:45px !important;
 
   object-fit:cover;
 
-  border-radius:10px;
+  border-radius:8px;
 
   display:block;
 
-  margin:0 auto 12px auto;
+  margin:0 auto 10px auto;
 }
 
 /* JUDUL CARD */
@@ -229,13 +229,30 @@ table td{
   font-size:18px;
 }
 
-/* FOTO EDUKASI KECIL */
+/* FOTO EDUKASI SUPER KECIL */
 
 .detail img{
 
-  width:120px;
+  width:70px !important;
 
-  height:90px;
+  height:50px !important;
+
+  object-fit:cover;
+
+  border-radius:8px;
+
+  display:block;
+
+  margin:10px auto;
+}
+
+/* FOTO BESAR */
+
+.foto-besar{
+
+  width:120px !important;
+
+  height:80px !important;
 
   object-fit:cover;
 
@@ -244,23 +261,6 @@ table td{
   display:block;
 
   margin:15px auto;
-}
-
-/* FOTO BESAR */
-
-.foto-besar{
-
-  width:50%;
-
-  height:180px;
-
-  object-fit:cover;
-
-  border-radius:15px;
-
-  display:block;
-
-  margin:20px auto;
 }
 
 /* FOOTER */
@@ -304,15 +304,15 @@ footer{
 
   .detail img{
 
-    width:100px;
+    width:60px !important;
 
-    height:75px;
+    height:45px !important;
   }
 
   .card img{
 
-    width:80px;
+    width:55px !important;
 
-    height:60px;
+    height:40px !important;
   }
 }
