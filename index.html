@@ -1,650 +1,348 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>CleanZone</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CleanZone - Website Kebersihan Lingkungan</title>
 
   <style>
-
     *{
       margin:0;
       padding:0;
       box-sizing:border-box;
-      font-family:'Poppins', sans-serif;
-      scroll-behavior:smooth;
+      font-family: Arial, sans-serif;
     }
 
     body{
-      background:#f4fff7;
+      background:#f4fff4;
       color:#333;
+      line-height:1.6;
     }
 
     /* HEADER */
-
     header{
-      width:100%;
-      background:#1f7a1f;
-      padding:20px 8%;
+      background:linear-gradient(to right, #2e8b57, #4caf50);
+      color:white;
+      padding:20px 50px;
       display:flex;
       justify-content:space-between;
       align-items:center;
-      position:fixed;
+      position:sticky;
       top:0;
       z-index:1000;
-      box-shadow:0 3px 10px rgba(0,0,0,0.2);
+      box-shadow:0 2px 10px rgba(0,0,0,0.2);
     }
 
     .logo{
-      color:white;
       font-size:30px;
-      font-weight:700;
-    }
-
-    .logo span{
-      color:#9cff57;
+      font-weight:bold;
     }
 
     nav a{
       color:white;
       text-decoration:none;
       margin-left:20px;
-      font-weight:500;
+      font-weight:bold;
       transition:0.3s;
     }
 
     nav a:hover{
-      color:#9cff57;
+      color:#d4ffd4;
     }
 
     /* HERO */
-
     .hero{
-      height:100vh;
-      background:
-      linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-      url('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1400&q=80');
-
+      height:90vh;
+      background:url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80');
       background-size:cover;
       background-position:center;
-
       display:flex;
       justify-content:center;
       align-items:center;
       text-align:center;
       color:white;
-      padding:20px;
+      position:relative;
+    }
+
+    .hero::before{
+      content:'';
+      position:absolute;
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,0.45);
     }
 
     .hero-content{
-      max-width:800px;
+      position:relative;
+      z-index:1;
+      max-width:700px;
+      padding:20px;
     }
 
     .hero h1{
-      font-size:65px;
+      font-size:55px;
       margin-bottom:20px;
     }
 
     .hero p{
-      font-size:22px;
-      line-height:1.8;
-      margin-bottom:35px;
+      font-size:20px;
+      margin-bottom:30px;
     }
 
     .btn{
-      background:#32cd32;
+      background:#4caf50;
       color:white;
+      padding:14px 28px;
       text-decoration:none;
-      padding:15px 35px;
-      border-radius:40px;
+      border-radius:30px;
       font-weight:bold;
       transition:0.3s;
-      display:inline-block;
     }
 
     .btn:hover{
-      background:#228b22;
-      transform:scale(1.05);
+      background:#2e8b57;
     }
 
     /* SECTION */
-
     section{
-      padding:100px 8%;
+      padding:70px 10%;
     }
 
     .title{
       text-align:center;
-      margin-bottom:60px;
+      margin-bottom:50px;
     }
 
     .title h2{
-      font-size:45px;
-      color:#228b22;
+      font-size:38px;
+      color:#2e8b57;
       margin-bottom:10px;
     }
 
-    .title p{
-      color:#666;
-    }
-
-    /* CARD */
-
+    /* CARDS */
     .card-container{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:30px;
+      grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+      gap:25px;
     }
 
     .card{
       background:white;
-      padding:30px;
-      border-radius:20px;
+      padding:25px;
+      border-radius:15px;
       box-shadow:0 5px 15px rgba(0,0,0,0.1);
       transition:0.3s;
-      text-align:center;
     }
 
     .card:hover{
       transform:translateY(-10px);
     }
 
-    .icon{
-      font-size:55px;
-    }
-
     .card h3{
-      margin:20px 0;
-      color:#228b22;
-    }
-
-    .card p{
-      color:#555;
-      line-height:1.7;
-    }
-
-    .card button{
-      margin-top:20px;
-      padding:12px 25px;
-      border:none;
-      background:#32cd32;
-      color:white;
-      border-radius:10px;
-      cursor:pointer;
-      font-weight:bold;
-    }
-
-    .card button:hover{
-      background:#228b22;
-    }
-
-    /* POPUP */
-
-    .popup{
-      width:100%;
-      height:100vh;
-      background:rgba(0,0,0,0.6);
-      position:fixed;
-      top:0;
-      left:0;
-      display:none;
-      justify-content:center;
-      align-items:center;
-      z-index:2000;
-    }
-
-    .popup-content{
-      width:80%;
-      max-width:700px;
-      background:white;
-      padding:40px;
-      border-radius:20px;
-      position:relative;
-      animation:popup 0.4s;
-    }
-
-    @keyframes popup{
-      from{
-        transform:scale(0.7);
-        opacity:0;
-      }
-
-      to{
-        transform:scale(1);
-        opacity:1;
-      }
-    }
-
-    .close{
-      position:absolute;
-      top:15px;
-      right:20px;
-      font-size:28px;
-      cursor:pointer;
-      color:red;
-    }
-
-    .popup-content h2{
-      color:#228b22;
-      margin-bottom:20px;
-    }
-
-    .popup-content p{
-      line-height:2;
+      color:#2e8b57;
       margin-bottom:15px;
     }
 
     /* TABLE */
-
     table{
       width:100%;
       border-collapse:collapse;
       background:white;
-      border-radius:20px;
-      overflow:hidden;
       box-shadow:0 5px 15px rgba(0,0,0,0.1);
+      border-radius:10px;
+      overflow:hidden;
     }
 
     table th{
-      background:#32cd32;
+      background:#4caf50;
       color:white;
-      padding:20px;
+      padding:15px;
     }
 
     table td{
-      padding:20px;
+      padding:15px;
       text-align:center;
       border-bottom:1px solid #ddd;
     }
 
-    /* FOOTER */
+    table tr:hover{
+      background:#f1fff1;
+    }
 
+    /* ABOUT */
+    .about{
+      background:#e8ffe8;
+      border-radius:20px;
+      padding:40px;
+      text-align:center;
+    }
+
+    /* FOOTER */
     footer{
-      background:#145214;
+      background:#2e8b57;
       color:white;
       text-align:center;
-      padding:40px;
-      margin-top:50px;
+      padding:20px;
+      margin-top:40px;
     }
 
     /* RESPONSIVE */
-
     @media(max-width:768px){
-
       .hero h1{
-        font-size:40px;
+        font-size:38px;
       }
 
       nav{
-        display:none;
+        display:flex;
+        flex-wrap:wrap;
       }
 
+      nav a{
+        margin-top:10px;
+      }
     }
 
   </style>
-
 </head>
 
 <body>
 
   <!-- HEADER -->
-
   <header>
-
-    <div class="logo">
-      Clean<span>Zone</span>
-    </div>
+    <div class="logo">🌿 CleanZone</div>
 
     <nav>
-      <a href="#home">Beranda</a>
-      <a href="#tips">Tips</a>
-      <a href="#berita">Berita</a>
-      <a href="#jadwal">Jadwal</a>
+      <a href="#beranda">Beranda</a>
+      <a href="#tips">Tips Kebersihan</a>
+      <a href="#jadwal">Jadwal Piket</a>
+      <a href="#tentang">Tentang Kami</a>
     </nav>
-
   </header>
 
   <!-- HERO -->
-
-  <section class="hero" id="home">
-
+  <section class="hero" id="beranda">
     <div class="hero-content">
-
-      <h1>
-        Peduli Lingkungan,
-        Peduli Masa Depan
-      </h1>
-
+      <h1>Lingkungan Bersih, Sekolah Nyaman</h1>
       <p>
-        CleanZone hadir untuk meningkatkan kesadaran siswa
-        tentang pentingnya menjaga kebersihan lingkungan sekolah.
+        Mari bersama menjaga kebersihan lingkungan sekolah 
+        demi kenyamanan belajar dan kesehatan bersama.
       </p>
 
-      <a href="#tips" class="btn">
-        Jelajahi Sekarang
-      </a>
-
+      <a href="#tips" class="btn">Lihat Tips</a>
     </div>
-
   </section>
 
   <!-- TIPS -->
-
   <section id="tips">
-
     <div class="title">
-
-      <h2>Tips Menjaga Kebersihan</h2>
-
-      <p>
-        Klik tombol untuk melihat penjelasan lengkap.
-      </p>
-
+      <h2>Tips Kebersihan</h2>
+      <p>Beberapa kebiasaan sederhana untuk menjaga lingkungan sekolah tetap bersih.</p>
     </div>
 
     <div class="card-container">
 
       <div class="card">
-
-        <div class="icon">🗑️</div>
-
-        <h3>Buang Sampah</h3>
-
+        <h3>🗑 Buang Sampah</h3>
         <p>
-          Biasakan membuang sampah pada tempatnya.
+          Biasakan membuang sampah pada tempatnya agar lingkungan sekolah tetap bersih dan nyaman.
         </p>
-
-        <button onclick="openPopup('popup1')">
-          Lihat Detail
-        </button>
-
       </div>
 
       <div class="card">
-
-        <div class="icon">🧹</div>
-
-        <h3>Piket Kelas</h3>
-
+        <h3>🧹 Piket Kelas</h3>
         <p>
-          Membersihkan kelas secara rutin.
+          Laksanakan piket kelas sesuai jadwal agar ruang kelas selalu rapi dan sehat.
         </p>
-
-        <button onclick="openPopup('popup2')">
-          Lihat Detail
-        </button>
-
       </div>
 
       <div class="card">
-
-        <div class="icon">🌱</div>
-
-        <h3>Menanam Pohon</h3>
-
+        <h3>🌱 Menanam Tanaman</h3>
         <p>
-          Membuat lingkungan lebih hijau.
+          Menanam tanaman dapat membuat lingkungan sekolah menjadi lebih hijau dan segar.
         </p>
+      </div>
 
-        <button onclick="openPopup('popup3')">
-          Lihat Detail
-        </button>
-
+      <div class="card">
+        <h3>💧 Hemat Air</h3>
+        <p>
+          Gunakan air seperlunya dan jangan lupa menutup keran setelah digunakan.
+        </p>
       </div>
 
     </div>
-
-  </section>
-
-  <!-- BERITA -->
-
-  <section id="berita">
-
-    <div class="title">
-
-      <h2>Berita Lingkungan</h2>
-
-      <p>
-        Klik berita untuk membaca lebih lengkap.
-      </p>
-
-    </div>
-
-    <div class="card-container">
-
-      <div class="card">
-
-        <div class="icon">🌊</div>
-
-        <h3>Banjir Akibat Sampah</h3>
-
-        <p>
-          Banyak sungai tersumbat sampah plastik.
-        </p>
-
-        <button onclick="openPopup('popup4')">
-          Baca Berita
-        </button>
-
-      </div>
-
-      <div class="card">
-
-        <div class="icon">🏫</div>
-
-        <h3>Sekolah Bersih</h3>
-
-        <p>
-          Sekolah yang bersih meningkatkan kenyamanan belajar.
-        </p>
-
-        <button onclick="openPopup('popup5')">
-          Baca Berita
-        </button>
-
-      </div>
-
-    </div>
-
   </section>
 
   <!-- JADWAL -->
-
   <section id="jadwal">
-
     <div class="title">
-
-      <h2>Jadwal Piket</h2>
-
+      <h2>Jadwal Piket Kelas</h2>
+      <p>Jadwal kebersihan untuk menjaga kelas tetap nyaman.</p>
     </div>
 
     <table>
-
       <tr>
         <th>Hari</th>
-        <th>Kelompok</th>
+        <th>Petugas</th>
         <th>Tugas</th>
       </tr>
 
       <tr>
         <td>Senin</td>
         <td>Kelompok 1</td>
-        <td>Menyapu dan Mengepel</td>
+        <td>Menyapu & Mengepel</td>
       </tr>
 
       <tr>
         <td>Selasa</td>
         <td>Kelompok 2</td>
-        <td>Merapikan Meja</td>
+        <td>Membersihkan Meja</td>
       </tr>
 
       <tr>
         <td>Rabu</td>
         <td>Kelompok 3</td>
+        <td>Merapikan Kelas</td>
+      </tr>
+
+      <tr>
+        <td>Kamis</td>
+        <td>Kelompok 4</td>
         <td>Membuang Sampah</td>
       </tr>
 
+      <tr>
+        <td>Jumat</td>
+        <td>Semua Siswa</td>
+        <td>Kerja Bakti Bersama</td>
+      </tr>
     </table>
+  </section>
 
+  <!-- ABOUT -->
+  <section id="tentang">
+    <div class="title">
+      <h2>Tentang Kami</h2>
+    </div>
+
+    <div class="about">
+      <p>
+        CleanZone adalah website edukasi yang dibuat untuk meningkatkan kesadaran siswa 
+        terhadap pentingnya menjaga kebersihan lingkungan sekolah.
+      </p>
+
+      <br>
+
+      <p>
+        Dengan adanya website ini, diharapkan siswa dapat memiliki kebiasaan hidup bersih, 
+        disiplin, dan peduli terhadap lingkungan sekitar.
+      </p>
+    </div>
   </section>
 
   <!-- FOOTER -->
-
   <footer>
-
-    <h2>🌿 CleanZone</h2>
-
-    <p>
-      Website Pengingat Kebersihan Lingkungan Sekolah
-    </p>
-
+    <p>© 2026 CleanZone | Website Pengingat Kebersihan Lingkungan</p>
   </footer>
-
-  <!-- POPUP 1 -->
-
-  <div class="popup" id="popup1">
-
-    <div class="popup-content">
-
-      <span class="close" onclick="closePopup('popup1')">
-        ×
-      </span>
-
-      <h2>Buang Sampah Pada Tempatnya</h2>
-
-      <p>
-        Sampah yang dibuang sembarangan dapat menyebabkan banjir,
-        pencemaran lingkungan, dan bau tidak sedap.
-      </p>
-
-      <p>
-        Dengan membuang sampah pada tempatnya,
-        lingkungan sekolah menjadi lebih bersih dan nyaman.
-      </p>
-
-    </div>
-
-  </div>
-
-  <!-- POPUP 2 -->
-
-  <div class="popup" id="popup2">
-
-    <div class="popup-content">
-
-      <span class="close" onclick="closePopup('popup2')">
-        ×
-      </span>
-
-      <h2>Piket Kelas</h2>
-
-      <p>
-        Piket kelas membantu menjaga kebersihan ruang belajar.
-      </p>
-
-      <p>
-        Kegiatan ini juga melatih tanggung jawab,
-        kerja sama, dan disiplin siswa.
-      </p>
-
-    </div>
-
-  </div>
-
-  <!-- POPUP 3 -->
-
-  <div class="popup" id="popup3">
-
-    <div class="popup-content">
-
-      <span class="close" onclick="closePopup('popup3')">
-        ×
-      </span>
-
-      <h2>Menanam Pohon</h2>
-
-      <p>
-        Pohon menghasilkan oksigen dan membuat udara lebih segar.
-      </p>
-
-      <p>
-        Lingkungan hijau juga membuat sekolah terlihat indah.
-      </p>
-
-    </div>
-
-  </div>
-
-  <!-- POPUP 4 -->
-
-  <div class="popup" id="popup4">
-
-    <div class="popup-content">
-
-      <span class="close" onclick="closePopup('popup4')">
-        ×
-      </span>
-
-      <h2>Banjir Akibat Sampah</h2>
-
-      <p>
-        Banyak daerah mengalami banjir karena saluran air tersumbat sampah plastik.
-      </p>
-
-      <p>
-        Oleh karena itu masyarakat diharapkan lebih peduli terhadap kebersihan lingkungan.
-      </p>
-
-    </div>
-
-  </div>
-
-  <!-- POPUP 5 -->
-
-  <div class="popup" id="popup5">
-
-    <div class="popup-content">
-
-      <span class="close" onclick="closePopup('popup5')">
-        ×
-      </span>
-
-      <h2>Sekolah Bersih dan Nyaman</h2>
-
-      <p>
-        Sekolah yang bersih membuat siswa lebih fokus dan nyaman saat belajar.
-      </p>
-
-      <p>
-        Banyak sekolah mulai menerapkan program peduli lingkungan.
-      </p>
-
-    </div>
-
-  </div>
-
-  <!-- JAVASCRIPT -->
-
-  <script>
-
-    function openPopup(id){
-
-      document.getElementById(id).style.display = "flex";
-
-    }
-
-    function closePopup(id){
-
-      document.getElementById(id).style.display = "none";
-
-    }
-
-  </script>
 
 </body>
 </html>
