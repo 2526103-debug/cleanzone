@@ -1,477 +1,150 @@
+<!-- ================================================= -->
+<!-- FILE 1 = index.html -->
+<!-- ================================================= -->
+
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
 
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>CleanZone Premium</title>
+  <meta name="viewport"
+  content="width=device-width, initial-scale=1.0">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <title>CleanZone</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:'Poppins', sans-serif;
-      scroll-behavior:smooth;
-    }
-
-    body{
-      background:#f4fff7;
-      color:#333;
-    }
-
-    /* HEADER */
-
-    header{
-      width:100%;
-      padding:20px 8%;
-      background:rgba(0,0,0,0.5);
-      backdrop-filter:blur(5px);
-      position:fixed;
-      top:0;
-      z-index:1000;
-
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-    }
-
-    .logo{
-      color:white;
-      font-size:32px;
-      font-weight:700;
-    }
-
-    .logo span{
-      color:#7CFC00;
-    }
-
-    nav a{
-      color:white;
-      text-decoration:none;
-      margin-left:25px;
-      transition:0.3s;
-      font-weight:500;
-    }
-
-    nav a:hover{
-      color:#7CFC00;
-    }
-
-    /* HERO */
-
-    .hero{
-      width:100%;
-      height:100vh;
-
-      background:
-      linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-      url('https://images.unsplash.com/photo-1492496913980-501348b61469?auto=format&fit=crop&w=1400&q=80');
-
-      background-size:cover;
-      background-position:center;
-
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      text-align:center;
-      color:white;
-      padding:20px;
-    }
-
-    .hero-content{
-      max-width:850px;
-      animation:fade 2s;
-    }
-
-    .hero h1{
-      font-size:65px;
-      margin-bottom:25px;
-    }
-
-    .hero p{
-      font-size:22px;
-      line-height:2;
-      margin-bottom:40px;
-    }
-
-    .btn{
-      display:inline-block;
-      padding:16px 38px;
-      background:#32cd32;
-      color:white;
-      text-decoration:none;
-      border-radius:40px;
-      transition:0.3s;
-      font-weight:bold;
-      box-shadow:0 5px 20px rgba(0,0,0,0.3);
-    }
-
-    .btn:hover{
-      background:#228b22;
-      transform:scale(1.05);
-    }
-
-    @keyframes fade{
-      from{
-        opacity:0;
-        transform:translateY(50px);
-      }
-
-      to{
-        opacity:1;
-        transform:translateY(0);
-      }
-    }
-
-    /* SECTION */
-
-    section{
-      padding:100px 8%;
-    }
-
-    .title{
-      text-align:center;
-      margin-bottom:60px;
-    }
-
-    .title h2{
-      font-size:45px;
-      color:#228B22;
-      margin-bottom:15px;
-    }
-
-    .title p{
-      color:#666;
-      font-size:18px;
-    }
-
-    /* CARD */
-
-    .card-container{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-      gap:35px;
-    }
-
-    .card{
-      background:white;
-      border-radius:25px;
-      overflow:hidden;
-      box-shadow:0 8px 20px rgba(0,0,0,0.1);
-      transition:0.4s;
-    }
-
-    .card:hover{
-      transform:translateY(-10px);
-    }
-
-    .card img{
-      width:100%;
-      height:240px;
-      object-fit:cover;
-    }
-
-    .card-content{
-      padding:30px;
-    }
-
-    .card-content h3{
-      color:#228B22;
-      margin-bottom:15px;
-      font-size:28px;
-    }
-
-    .card-content p{
-      line-height:1.9;
-      color:#555;
-    }
-
-    .card-content button{
-      margin-top:25px;
-      padding:13px 28px;
-      border:none;
-      background:#32cd32;
-      color:white;
-      border-radius:12px;
-      cursor:pointer;
-      font-weight:bold;
-      transition:0.3s;
-    }
-
-    .card-content button:hover{
-      background:#228B22;
-    }
-
-    /* POPUP */
-
-    .popup{
-      width:100%;
-      height:100vh;
-      background:rgba(0,0,0,0.7);
-      position:fixed;
-      top:0;
-      left:0;
-      display:none;
-      justify-content:center;
-      align-items:center;
-      z-index:2000;
-      padding:20px;
-    }
-
-    .popup-content{
-      width:90%;
-      max-width:850px;
-      background:white;
-      border-radius:25px;
-      overflow:auto;
-      max-height:90vh;
-      position:relative;
-      animation:popup 0.4s;
-    }
-
-    .popup-content img{
-      width:100%;
-      height:320px;
-      object-fit:cover;
-    }
-
-    .popup-text{
-      padding:35px;
-    }
-
-    .popup-text h2{
-      color:#228B22;
-      margin-bottom:20px;
-      font-size:35px;
-    }
-
-    .popup-text p{
-      line-height:2;
-      color:#444;
-      margin-bottom:18px;
-    }
-
-    .close{
-      position:absolute;
-      top:15px;
-      right:25px;
-      color:white;
-      font-size:35px;
-      cursor:pointer;
-      font-weight:bold;
-    }
-
-    @keyframes popup{
-      from{
-        transform:scale(0.7);
-        opacity:0;
-      }
-
-      to{
-        transform:scale(1);
-        opacity:1;
-      }
-    }
-
-    /* TABLE */
-
-    table{
-      width:100%;
-      border-collapse:collapse;
-      background:white;
-      border-radius:20px;
-      overflow:hidden;
-      box-shadow:0 5px 20px rgba(0,0,0,0.1);
-    }
-
-    table th{
-      background:#32cd32;
-      color:white;
-      padding:20px;
-    }
-
-    table td{
-      padding:20px;
-      text-align:center;
-      border-bottom:1px solid #ddd;
-    }
-
-    table tr:hover{
-      background:#f0fff0;
-    }
-
-    /* FOOTER */
-
-    footer{
-      background:#145214;
-      color:white;
-      text-align:center;
-      padding:50px;
-      margin-top:60px;
-    }
-
-    footer h2{
-      margin-bottom:15px;
-    }
-
-    footer p{
-      line-height:2;
-    }
-
-    /* RESPONSIVE */
-
-    @media(max-width:768px){
-
-      .hero h1{
-        font-size:42px;
-      }
-
-      .hero p{
-        font-size:18px;
-      }
-
-      nav{
-        display:none;
-      }
-
-    }
-
-  </style>
+  <link rel="stylesheet"
+  href="style.css">
 
 </head>
 
 <body>
 
-  <!-- HEADER -->
+  <!-- NAVBAR -->
 
   <header>
 
     <div class="logo">
-      Clean<span>Zone</span>
+      🌿 CleanZone
     </div>
 
     <nav>
-      <a href="#home">Beranda</a>
-      <a href="#edukasi">Edukasi</a>
-      <a href="#berita">Berita Nyata</a>
-      <a href="#jadwal">Jadwal</a>
+
+      <a href="index.html">
+        Beranda
+      </a>
+
+      <a href="buang-sampah.html">
+        Buang Sampah
+      </a>
+
+      <a href="piket-kelas.html">
+        Piket Kelas
+      </a>
+
+      <a href="menanam-pohon.html">
+        Menanam Pohon
+      </a>
+
+      <a href="berita-banjir.html">
+        Berita Banjir
+      </a>
+
+      <a href="berita-sungai.html">
+        Sungai Tercemar
+      </a>
+
     </nav>
 
   </header>
 
   <!-- HERO -->
 
-  <section class="hero" id="home">
+  <section class="hero">
 
-    <div class="hero-content">
+    <h1>
+      Peduli Lingkungan,
+      Peduli Masa Depan
+    </h1>
 
-      <h1>
-        Lingkungan Bersih,
-        Masa Depan Lebih Baik
-      </h1>
-
-      <p>
-        CleanZone dibuat untuk meningkatkan kesadaran siswa mengenai pentingnya
-        menjaga kebersihan lingkungan sekolah dan lingkungan sekitar.
-        Lingkungan yang bersih membuat hidup lebih sehat, nyaman,
-        indah, dan bebas dari berbagai penyakit.
-      </p>
-
-      <a href="#edukasi" class="btn">
-        Pelajari Sekarang
-      </a>
-
-    </div>
+    <p>
+      Website edukasi kebersihan lingkungan sekolah.
+    </p>
 
   </section>
 
-  <!-- EDUKASI -->
+  <!-- CARD -->
 
-  <section id="edukasi">
+  <section class="card-container">
 
-    <div class="title">
+    <!-- CARD 1 -->
 
-      <h2>Edukasi Peduli Lingkungan</h2>
+    <div class="card">
 
-      <p>
-        Klik tombol untuk membaca penjelasan lengkap dan contoh nyata.
-      </p>
+      <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=1000&q=80">
+
+      <div class="card-content">
+
+        <h2>
+          Buang Sampah
+        </h2>
+
+        <p>
+          Pelajari cara membuang dan memilah sampah dengan benar.
+        </p>
+
+        <a href="buang-sampah.html">
+          Pelajari
+        </a>
+
+      </div>
 
     </div>
 
-    <div class="card-container">
+    <!-- CARD 2 -->
 
-      <!-- CARD 1 -->
+    <div class="card">
 
-      <div class="card">
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80">
 
-        <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=1000&q=80">
+      <div class="card-content">
 
-        <div class="card-content">
+        <h2>
+          Piket Kelas
+        </h2>
 
-          <h3>Buang Sampah Pada Tempatnya</h3>
+        <p>
+          Pentingnya menjaga kebersihan kelas setiap hari.
+        </p>
 
-          <p>
-            Sampah yang dibuang sembarangan dapat menyebabkan pencemaran lingkungan
-            dan banjir.
-          </p>
-
-          <button onclick="openPopup('popup1')">
-            Baca Selengkapnya
-          </button>
-
-        </div>
+        <a href="piket-kelas.html">
+          Pelajari
+        </a>
 
       </div>
 
-      <!-- CARD 2 -->
+    </div>
 
-      <div class="card">
+    <!-- CARD 3 -->
 
-        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80">
+    <div class="card">
 
-        <div class="card-content">
+      <img src="https://images.unsplash.com/photo-1492496913980-501348b61469?auto=format&fit=crop&w=1000&q=80">
 
-          <h3>Pentingnya Piket Kelas</h3>
+      <div class="card-content">
 
-          <p>
-            Menjaga kebersihan kelas membuat suasana belajar lebih nyaman.
-          </p>
+        <h2>
+          Menanam Pohon
+        </h2>
 
-          <button onclick="openPopup('popup2')">
-            Baca Selengkapnya
-          </button>
+        <p>
+          Kenapa pohon penting untuk kehidupan manusia.
+        </p>
 
-        </div>
-
-      </div>
-
-      <!-- CARD 3 -->
-
-      <div class="card">
-
-        <img src="https://images.unsplash.com/photo-1492496913980-501348b61469?auto=format&fit=crop&w=1000&q=80">
-
-        <div class="card-content">
-
-          <h3>Menanam Pohon</h3>
-
-          <p>
-            Pohon membantu menghasilkan udara bersih dan mengurangi polusi.
-          </p>
-
-          <button onclick="openPopup('popup3')">
-            Baca Selengkapnya
-          </button>
-
-        </div>
+        <a href="menanam-pohon.html">
+          Pelajari
+        </a>
 
       </div>
 
@@ -481,340 +154,584 @@
 
   <!-- BERITA -->
 
-  <section id="berita">
+  <section class="news-container">
 
-    <div class="title">
+    <div class="news-card">
 
-      <h2>Contoh Kejadian Nyata</h2>
+      <img src="https://images.unsplash.com/photo-1513883049090-d0b7439799bf?auto=format&fit=crop&w=1000&q=80">
 
-      <p>
-        Contoh masalah lingkungan yang benar-benar terjadi di dunia nyata.
-      </p>
+      <div class="news-content">
 
-    </div>
+        <h2>
+          Banjir Karena Sampah
+        </h2>
 
-    <div class="card-container">
+        <p>
+          Contoh kejadian nyata akibat sampah.
+        </p>
 
-      <!-- BERITA 1 -->
-
-      <div class="card">
-
-        <img src="https://images.unsplash.com/photo-1547683905-f686c993aae5?auto=format&fit=crop&w=1000&q=80">
-
-        <div class="card-content">
-
-          <h3>Banjir Karena Sampah Plastik</h3>
-
-          <p>
-            Banyak kota mengalami banjir akibat saluran air tersumbat sampah.
-          </p>
-
-          <button onclick="openPopup('popup4')">
-            Baca Berita
-          </button>
-
-        </div>
+        <a href="berita-banjir.html">
+          Baca Berita
+        </a>
 
       </div>
 
-      <!-- BERITA 2 -->
+    </div>
 
-      <div class="card">
+    <div class="news-card">
 
-        <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1000&q=80">
+      <img src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?auto=format&fit=crop&w=1000&q=80">
 
-        <div class="card-content">
+      <div class="news-content">
 
-          <h3>Pencemaran Sungai</h3>
+        <h2>
+          Sungai Tercemar
+        </h2>
 
-          <p>
-            Banyak sungai tercemar limbah dan sampah rumah tangga.
-          </p>
+        <p>
+          Pencemaran sungai akibat limbah dan sampah.
+        </p>
 
-          <button onclick="openPopup('popup5')">
-            Baca Berita
-          </button>
-
-        </div>
+        <a href="berita-sungai.html">
+          Baca Berita
+        </a>
 
       </div>
 
     </div>
 
   </section>
-
-  <!-- JADWAL -->
-
-  <section id="jadwal">
-
-    <div class="title">
-
-      <h2>Jadwal Piket Kelas</h2>
-
-    </div>
-
-    <table>
-
-      <tr>
-        <th>Hari</th>
-        <th>Kelompok</th>
-        <th>Tugas</th>
-      </tr>
-
-      <tr>
-        <td>Senin</td>
-        <td>Kelompok 1</td>
-        <td>Menyapu dan Mengepel</td>
-      </tr>
-
-      <tr>
-        <td>Selasa</td>
-        <td>Kelompok 2</td>
-        <td>Membersihkan Papan Tulis</td>
-      </tr>
-
-      <tr>
-        <td>Rabu</td>
-        <td>Kelompok 3</td>
-        <td>Merapikan Meja dan Kursi</td>
-      </tr>
-
-      <tr>
-        <td>Kamis</td>
-        <td>Kelompok 4</td>
-        <td>Membuang Sampah</td>
-      </tr>
-
-      <tr>
-        <td>Jumat</td>
-        <td>Semua Siswa</td>
-        <td>Kerja Bakti Bersama</td>
-      </tr>
-
-    </table>
-
-  </section>
-
-  <!-- FOOTER -->
-
-  <footer>
-
-    <h2>🌿 CleanZone</h2>
-
-    <p>
-      Website edukasi kebersihan lingkungan sekolah.
-    </p>
-
-    <p>
-      © 2026 CleanZone | Peduli Lingkungan, Peduli Masa Depan
-    </p>
-
-  </footer>
-
-  <!-- POPUP 1 -->
-
-  <div class="popup" id="popup1">
-
-    <span class="close" onclick="closePopup('popup1')">
-      ×
-    </span>
-
-    <div class="popup-content">
-
-      <img src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1200&q=80">
-
-      <div class="popup-text">
-
-        <h2>Buang Sampah Pada Tempatnya</h2>
-
-        <p>
-          Sampah yang dibuang sembarangan dapat menyebabkan berbagai masalah lingkungan,
-          seperti banjir, pencemaran air, dan munculnya penyakit.
-        </p>
-
-        <p>
-          Di Indonesia, beberapa daerah pernah mengalami banjir besar akibat
-          saluran air yang tersumbat oleh sampah plastik.
-        </p>
-
-        <p>
-          Plastik membutuhkan waktu sangat lama untuk terurai,
-          sehingga dapat mencemari lingkungan selama bertahun-tahun.
-        </p>
-
-        <p>
-          Oleh karena itu, membuang sampah pada tempatnya merupakan langkah kecil
-          yang sangat penting untuk menjaga bumi tetap bersih.
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-  <!-- POPUP 2 -->
-
-  <div class="popup" id="popup2">
-
-    <span class="close" onclick="closePopup('popup2')">
-      ×
-    </span>
-
-    <div class="popup-content">
-
-      <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80">
-
-      <div class="popup-text">
-
-        <h2>Pentingnya Piket Kelas</h2>
-
-        <p>
-          Piket kelas membantu menjaga kebersihan ruang belajar agar tetap nyaman digunakan.
-        </p>
-
-        <p>
-          Kelas yang bersih membuat siswa lebih fokus saat belajar dan mengurangi risiko penyakit.
-        </p>
-
-        <p>
-          Selain itu, kegiatan piket melatih rasa tanggung jawab,
-          disiplin, dan kerja sama antar siswa.
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-  <!-- POPUP 3 -->
-
-  <div class="popup" id="popup3">
-
-    <span class="close" onclick="closePopup('popup3')">
-      ×
-    </span>
-
-    <div class="popup-content">
-
-      <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80">
-
-      <div class="popup-text">
-
-        <h2>Menanam Pohon</h2>
-
-        <p>
-          Pohon sangat penting bagi kehidupan manusia karena menghasilkan oksigen.
-        </p>
-
-        <p>
-          Pohon juga membantu mengurangi polusi udara dan membuat lingkungan lebih sejuk.
-        </p>
-
-        <p>
-          Banyak kota besar mengalami suhu panas berlebihan karena kurangnya pepohonan.
-        </p>
-
-        <p>
-          Dengan menanam pohon sejak sekarang,
-          kita ikut menjaga masa depan bumi.
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-  <!-- POPUP 4 -->
-
-  <div class="popup" id="popup4">
-
-    <span class="close" onclick="closePopup('popup4')">
-      ×
-    </span>
-
-    <div class="popup-content">
-
-      <img src="https://images.unsplash.com/photo-1513883049090-d0b7439799bf?auto=format&fit=crop&w=1200&q=80">
-
-      <div class="popup-text">
-
-        <h2>Banjir Akibat Sampah Plastik</h2>
-
-        <p>
-          Banyak wilayah di Indonesia mengalami banjir akibat saluran air tersumbat sampah plastik.
-        </p>
-
-        <p>
-          Saat hujan deras turun, air tidak dapat mengalir dengan lancar
-          karena tertahan tumpukan sampah.
-        </p>
-
-        <p>
-          Kejadian seperti ini sering terjadi di kota besar dan menyebabkan
-          kerugian bagi masyarakat.
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-  <!-- POPUP 5 -->
-
-  <div class="popup" id="popup5">
-
-    <span class="close" onclick="closePopup('popup5')">
-      ×
-    </span>
-
-    <div class="popup-content">
-
-      <img src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?auto=format&fit=crop&w=1200&q=80">
-
-      <div class="popup-text">
-
-        <h2>Pencemaran Sungai</h2>
-
-        <p>
-          Banyak sungai tercemar akibat limbah rumah tangga dan sampah plastik.
-        </p>
-
-        <p>
-          Air sungai yang tercemar dapat membahayakan kesehatan manusia dan hewan.
-        </p>
-
-        <p>
-          Oleh karena itu masyarakat perlu menjaga kebersihan sungai
-          dan tidak membuang sampah sembarangan.
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-  <!-- SCRIPT -->
-
-  <script>
-
-    function openPopup(id){
-
-      document.getElementById(id).style.display = "flex";
-
-    }
-
-    function closePopup(id){
-
-      document.getElementById(id).style.display = "none";
-
-    }
-
-  </script>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+<!-- ================================================= -->
+<!-- FILE 2 = buang-sampah.html -->
+<!-- ================================================= -->
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>
+    Buang Sampah
+  </title>
+
+  <link rel="stylesheet"
+  href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">
+    🌿 CleanZone
+  </div>
+
+  <nav>
+
+    <a href="index.html">Beranda</a>
+
+    <a href="piket-kelas.html">Piket Kelas</a>
+
+    <a href="menanam-pohon.html">Menanam Pohon</a>
+
+  </nav>
+
+</header>
+
+<section class="detail">
+
+  <h1>
+    Cara Membuang Sampah Dengan Benar
+  </h1>
+
+  <img src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1200&q=80">
+
+  <p>
+    Sampah yang dibuang sembarangan dapat menyebabkan banjir,
+    pencemaran lingkungan, dan penyakit.
+  </p>
+
+  <h2>
+    Jenis Sampah
+  </h2>
+
+  <ul>
+
+    <li>
+      Sampah Organik
+    </li>
+
+    <li>
+      Sampah Anorganik
+    </li>
+
+    <li>
+      Sampah Berbahaya
+    </li>
+
+  </ul>
+
+  <h2>
+    Cara Memilah Sampah
+  </h2>
+
+  <img src="https://images.unsplash.com/photo-1604187351574-c75ca79f5807?auto=format&fit=crop&w=1200&q=80">
+
+  <p>
+    Pisahkan sampah sesuai jenisnya agar mudah didaur ulang.
+  </p>
+
+</section>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!-- ================================================= -->
+<!-- FILE 3 = piket-kelas.html -->
+<!-- ================================================= -->
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>
+    Piket Kelas
+  </title>
+
+  <link rel="stylesheet"
+  href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">
+    🌿 CleanZone
+  </div>
+
+  <nav>
+
+    <a href="index.html">Beranda</a>
+
+    <a href="buang-sampah.html">Buang Sampah</a>
+
+    <a href="menanam-pohon.html">Menanam Pohon</a>
+
+  </nav>
+
+</header>
+
+<section class="detail">
+
+  <h1>
+    Pentingnya Piket Kelas
+  </h1>
+
+  <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80">
+
+  <p>
+    Piket kelas membantu menjaga kebersihan ruang belajar.
+  </p>
+
+</section>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!-- ================================================= -->
+<!-- FILE 4 = menanam-pohon.html -->
+<!-- ================================================= -->
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>
+    Menanam Pohon
+  </title>
+
+  <link rel="stylesheet"
+  href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">
+    🌿 CleanZone
+  </div>
+
+  <nav>
+
+    <a href="index.html">Beranda</a>
+
+    <a href="buang-sampah.html">Buang Sampah</a>
+
+    <a href="piket-kelas.html">Piket Kelas</a>
+
+  </nav>
+
+</header>
+
+<section class="detail">
+
+  <h1>
+    Pentingnya Menanam Pohon
+  </h1>
+
+  <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80">
+
+  <p>
+    Pohon menghasilkan oksigen dan membantu mengurangi polusi udara.
+  </p>
+
+</section>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!-- ================================================= -->
+<!-- FILE 5 = berita-banjir.html -->
+<!-- ================================================= -->
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>
+    Berita Banjir
+  </title>
+
+  <link rel="stylesheet"
+  href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">
+    🌿 CleanZone
+  </div>
+
+  <nav>
+
+    <a href="index.html">Beranda</a>
+
+  </nav>
+
+</header>
+
+<section class="detail">
+
+  <h1>
+    Banjir Karena Sampah
+  </h1>
+
+  <img src="https://images.unsplash.com/photo-1513883049090-d0b7439799bf?auto=format&fit=crop&w=1200&q=80">
+
+  <p>
+    Banyak kota mengalami banjir akibat saluran air tersumbat sampah plastik.
+  </p>
+
+</section>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!-- ================================================= -->
+<!-- FILE 6 = berita-sungai.html -->
+<!-- ================================================= -->
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>
+    Sungai Tercemar
+  </title>
+
+  <link rel="stylesheet"
+  href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">
+    🌿 CleanZone
+  </div>
+
+  <nav>
+
+    <a href="index.html">Beranda</a>
+
+  </nav>
+
+</header>
+
+<section class="detail">
+
+  <h1>
+    Sungai Tercemar Karena Sampah
+  </h1>
+
+  <img src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?auto=format&fit=crop&w=1200&q=80">
+
+  <p>
+    Banyak sungai tercemar akibat limbah rumah tangga dan sampah plastik.
+  </p>
+
+</section>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!-- ================================================= -->
+<!-- FILE 7 = style.css -->
+<!-- ================================================= -->
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Poppins;
+}
+
+body{
+  background:#f4fff7;
+}
+
+header{
+
+  background:#1f7a1f;
+
+  padding:20px 8%;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+}
+
+.logo{
+
+  color:white;
+
+  font-size:30px;
+
+  font-weight:bold;
+}
+
+nav a{
+
+  color:white;
+
+  text-decoration:none;
+
+  margin-left:20px;
+
+  font-weight:bold;
+}
+
+.hero{
+
+  height:90vh;
+
+  background:
+  linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.5)),
+  url('https://images.unsplash.com/photo-1492496913980-501348b61469');
+
+  background-size:cover;
+
+  background-position:center;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+
+  align-items:center;
+
+  text-align:center;
+
+  color:white;
+}
+
+.hero h1{
+  font-size:60px;
+}
+
+.hero p{
+  margin-top:20px;
+  font-size:20px;
+}
+
+.card-container,
+.news-container{
+
+  padding:80px 8%;
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(300px,1fr));
+
+  gap:30px;
+}
+
+.card,
+.news-card{
+
+  background:white;
+
+  border-radius:20px;
+
+  overflow:hidden;
+
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card img,
+.news-card img{
+
+  width:100%;
+
+  height:250px;
+
+  object-fit:cover;
+}
+
+.card-content,
+.news-content{
+  padding:25px;
+}
+
+.card-content h2,
+.news-content h2{
+  color:#228b22;
+}
+
+.card-content p,
+.news-content p{
+  margin:15px 0;
+}
+
+.card-content a,
+.news-content a{
+
+  display:inline-block;
+
+  padding:12px 25px;
+
+  background:#32cd32;
+
+  color:white;
+
+  text-decoration:none;
+
+  border-radius:10px;
+}
+
+.detail{
+  padding:80px 10%;
+}
+
+.detail h1{
+  color:#228b22;
+  margin-bottom:30px;
+}
+
+.detail h2{
+  margin-top:40px;
+  color:#228b22;
+}
+
+.detail img{
+  width:100%;
+  border-radius:20px;
+  margin:25px 0;
+}
+
+.detail p,
+.detail li{
+  line-height:2;
+  margin-top:15px;
+}
