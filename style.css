@@ -1,3 +1,276 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:#f4fff7;
+  color:#333;
+}
+
+/* ======================= */
+/* NAVBAR */
+/* ======================= */
+
+header{
+
+  background:#1f7a1f;
+
+  padding:20px 8%;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  position:sticky;
+
+  top:0;
+
+  z-index:1000;
+}
+
+.logo{
+
+  color:white;
+
+  font-size:32px;
+
+  font-weight:bold;
+}
+
+nav a{
+
+  color:white;
+
+  text-decoration:none;
+
+  margin-left:20px;
+
+  font-weight:bold;
+
+  transition:0.3s;
+}
+
+nav a:hover{
+
+  color:#90ee90;
+}
+
+/* ======================= */
+/* HERO */
+/* ======================= */
+
+.hero{
+
+  height:95vh;
+
+  background:
+  linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.5)),
+  url('https://images.unsplash.com/photo-1492496913980-501348b61469');
+
+  background-size:cover;
+
+  background-position:center;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+
+  align-items:center;
+
+  text-align:center;
+
+  color:white;
+
+  padding:20px;
+}
+
+.hero h1{
+
+  font-size:65px;
+
+  margin-bottom:20px;
+}
+
+.hero p{
+
+  font-size:24px;
+
+  max-width:800px;
+
+  line-height:1.8;
+}
+
+/* ======================= */
+/* CARD */
+/* ======================= */
+
+.card-container,
+.news-container{
+
+  padding:80px 8%;
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(320px,1fr));
+
+  gap:35px;
+}
+
+.card,
+.news-card{
+
+  background:white;
+
+  border-radius:20px;
+
+  overflow:hidden;
+
+  box-shadow:0 5px 20px rgba(0,0,0,0.1);
+
+  transition:0.3s;
+}
+
+.card:hover,
+.news-card:hover{
+
+  transform:translateY(-10px);
+}
+
+.card img,
+.news-card img{
+
+  width:100%;
+
+  height:260px;
+
+  object-fit:cover;
+}
+
+.card-content,
+.news-content{
+
+  padding:30px;
+}
+
+.card-content h2,
+.news-content h2{
+
+  color:#228b22;
+
+  margin-bottom:15px;
+
+  font-size:28px;
+}
+
+.card-content p,
+.news-content p{
+
+  line-height:1.8;
+
+  margin-bottom:25px;
+}
+
+.card-content a,
+.news-content a{
+
+  display:inline-block;
+
+  padding:14px 28px;
+
+  background:#32cd32;
+
+  color:white;
+
+  text-decoration:none;
+
+  border-radius:10px;
+
+  font-weight:bold;
+
+  transition:0.3s;
+}
+
+.card-content a:hover,
+.news-content a:hover{
+
+  background:#228b22;
+}
+
+/* ======================= */
+/* DETAIL HALAMAN */
+/* ======================= */
+
+.detail{
+
+  padding:80px 10%;
+
+  background:white;
+
+  margin:50px auto;
+
+  width:90%;
+
+  border-radius:25px;
+
+  box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+.detail h1{
+
+  color:#228b22;
+
+  margin-bottom:30px;
+
+  font-size:50px;
+
+  text-align:center;
+}
+
+.detail h2{
+
+  color:#228b22;
+
+  margin-top:50px;
+
+  margin-bottom:20px;
+
+  font-size:35px;
+}
+
+.detail p{
+
+  line-height:2;
+
+  margin-top:20px;
+
+  font-size:19px;
+}
+
+.detail ul{
+
+  margin-top:20px;
+
+  padding-left:30px;
+}
+
+.detail li{
+
+  margin-top:15px;
+
+  line-height:1.8;
+
+  font-size:18px;
+}
+
 .detail img{
 
   width:100%;
@@ -8,25 +281,7 @@
 
   margin-bottom:25px;
 
-  object-fit:cover;
-}
-
-/* FOTO BESAR */
-.foto-besar{
-
   height:500px;
-}
 
-/* FOTO CONTOH PERILAKU */
-.foto-kecil{
-
-  width:70%;
-
-  height:300px;
-
-  display:block;
-
-  margin:auto;
-
-  border-radius:15px;
+  object-fit:cover;
 }
