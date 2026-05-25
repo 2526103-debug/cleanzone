@@ -132,13 +132,13 @@ nav a:hover{
   transform:translateY(-10px);
 }
 
-/* FOTO CARD SUPER KECIL */
+/* FOTO CARD KECIL */
 
 .card img{
 
-  width:60px !important;
+  width:60px;
 
-  height:45px !important;
+  height:45px;
 
   object-fit:cover;
 
@@ -187,7 +187,7 @@ table td{
   text-align:center;
 }
 
-/* DETAIL PAGE */
+/* HALAMAN DETAIL */
 
 .detail{
   width:90%;
@@ -196,6 +196,40 @@ table td{
   padding:50px;
   border-radius:25px;
   box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* FOTO HALAMAN SELANJUTNYA SUPER KECIL */
+
+.detail img{
+
+  width:90px !important;
+
+  height:65px !important;
+
+  object-fit:cover;
+
+  border-radius:8px;
+
+  display:block;
+
+  margin:10px auto;
+}
+
+/* FOTO BESAR */
+
+.foto-besar{
+
+  width:120px !important;
+
+  height:80px !important;
+
+  object-fit:cover;
+
+  border-radius:10px;
+
+  display:block;
+
+  margin:15px auto;
 }
 
 .detail h1{
@@ -227,40 +261,6 @@ table td{
   margin-top:10px;
   line-height:1.8;
   font-size:18px;
-}
-
-/* FOTO EDUKASI SUPER KECIL */
-
-.detail img{
-
-  width:70px !important;
-
-  height:50px !important;
-
-  object-fit:cover;
-
-  border-radius:8px;
-
-  display:block;
-
-  margin:10px auto;
-}
-
-/* FOTO BESAR */
-
-.foto-besar{
-
-  width:120px !important;
-
-  height:80px !important;
-
-  object-fit:cover;
-
-  border-radius:10px;
-
-  display:block;
-
-  margin:15px auto;
 }
 
 /* FOOTER */
@@ -304,15 +304,15 @@ footer{
 
   .detail img{
 
-    width:60px !important;
+    width:70px;
 
-    height:45px !important;
+    height:50px;
   }
 
   .card img{
 
-    width:55px !important;
+    width:55px;
 
-    height:40px !important;
+    height:40px;
   }
 }
