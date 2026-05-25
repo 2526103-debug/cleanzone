@@ -132,21 +132,36 @@ nav a:hover{
   transform:translateY(-10px);
 }
 
-/* FOTO CARD KECIL */
+/* SEMUA FOTO JADI KECIL */
 
-.card img{
+img{
 
-  width:60px;
+  width:70px !important;
 
-  height:45px;
+  height:50px !important;
 
-  object-fit:cover;
+  object-fit:cover !important;
 
-  border-radius:8px;
+  border-radius:8px !important;
 
-  display:block;
+  display:block !important;
 
-  margin:0 auto 10px auto;
+  margin:10px auto !important;
+}
+
+/* FOTO HERO */
+
+.hero img{
+  display:none;
+}
+
+/* FOTO BESAR */
+
+.foto-besar{
+
+  width:90px !important;
+
+  height:65px !important;
 }
 
 /* JUDUL CARD */
@@ -196,40 +211,6 @@ table td{
   padding:50px;
   border-radius:25px;
   box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-
-/* FOTO HALAMAN SELANJUTNYA SUPER KECIL */
-
-.detail img{
-
-  width:90px !important;
-
-  height:65px !important;
-
-  object-fit:cover;
-
-  border-radius:8px;
-
-  display:block;
-
-  margin:10px auto;
-}
-
-/* FOTO BESAR */
-
-.foto-besar{
-
-  width:120px !important;
-
-  height:80px !important;
-
-  object-fit:cover;
-
-  border-radius:10px;
-
-  display:block;
-
-  margin:15px auto;
 }
 
 .detail h1{
@@ -302,17 +283,10 @@ footer{
     padding:30px;
   }
 
-  .detail img{
+  img{
 
-    width:70px;
+    width:55px !important;
 
-    height:50px;
-  }
-
-  .card img{
-
-    width:55px;
-
-    height:40px;
+    height:40px !important;
   }
 }
