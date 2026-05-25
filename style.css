@@ -10,14 +10,10 @@ body{
   color:#333;
 }
 
-/* ======================= */
 /* HEADER */
-/* ======================= */
 
 header{
-  background:#1f7a1f;
-
-  padding:20px 8%;
+  background:#228b22;
 
   display:flex;
 
@@ -25,17 +21,13 @@ header{
 
   align-items:center;
 
-  position:sticky;
-
-  top:0;
-
-  z-index:1000;
+  padding:20px 8%;
 }
 
 .logo{
   color:white;
 
-  font-size:32px;
+  font-size:30px;
 
   font-weight:bold;
 }
@@ -48,231 +40,182 @@ nav a{
   margin-left:20px;
 
   font-weight:bold;
-
-  transition:0.3s;
 }
 
 nav a:hover{
-  color:#90ee90;
+  color:yellow;
 }
 
-/* ======================= */
 /* HERO */
-/* ======================= */
 
 .hero{
-
-  height:95vh;
-
-  background:
-  linear-gradient(rgba(0,0,0,0.5),
-  rgba(0,0,0,0.5)),
-  url('https://images.unsplash.com/photo-1492496913980-501348b61469?auto=format&fit=crop&w=1200&q=80');
+  background:url('https://images.unsplash.com/photo-1492496913980-501348b61469?auto=format&fit=crop&w=1200&q=80');
 
   background-size:cover;
 
   background-position:center;
 
-  display:flex;
-
-  flex-direction:column;
-
-  justify-content:center;
-
-  align-items:center;
-
   text-align:center;
 
   color:white;
 
-  padding:20px;
+  padding:120px 20px;
 }
 
 .hero h1{
-  font-size:65px;
+  font-size:60px;
 
   margin-bottom:20px;
 }
 
 .hero p{
-  font-size:24px;
+  font-size:22px;
+
+  max-width:800px;
+
+  margin:auto;
 
   line-height:1.8;
-
-  max-width:900px;
 }
 
-/* ======================= */
 /* CARD */
-/* ======================= */
 
-.card-container,
-.news-container{
-
-  padding:80px 8%;
-
+.card-container{
   display:grid;
 
   grid-template-columns:
-  repeat(auto-fit,minmax(320px,1fr));
+  repeat(auto-fit,minmax(300px,1fr));
 
-  gap:35px;
+  gap:30px;
+
+  padding:60px 8%;
 }
 
-.card,
-.news-card{
-
+.card{
   background:white;
 
   border-radius:20px;
 
   overflow:hidden;
 
-  box-shadow:0 5px 20px rgba(0,0,0,0.1);
-
-  transition:0.3s;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
-.card:hover,
-.news-card:hover{
-  transform:translateY(-10px);
-}
-
-.card img,
-.news-card img{
-
+.card img{
   width:100%;
 
-  height:250px;
+  height:230px;
 
   object-fit:cover;
 }
 
-.card-content,
-.news-content{
-  padding:30px;
+.card-content{
+  padding:25px;
 }
 
-.card-content h2,
-.news-content h2{
-
+.card-content h2{
   color:#228b22;
 
   margin-bottom:15px;
 }
 
-.card-content p,
-.news-content p{
-
+.card-content p{
   line-height:1.8;
 
   margin-bottom:20px;
 }
 
-.card-content a,
-.news-content a{
-
-  display:inline-block;
-
-  padding:12px 25px;
-
+.card-content a{
   background:#32cd32;
 
   color:white;
 
   text-decoration:none;
 
+  padding:12px 20px;
+
   border-radius:10px;
 
-  font-weight:bold;
-
-  transition:0.3s;
+  display:inline-block;
 }
 
-.card-content a:hover,
-.news-content a:hover{
+.card-content a:hover{
   background:#228b22;
 }
 
-/* ======================= */
-/* DETAIL */
-/* ======================= */
+/* HALAMAN DETAIL */
 
 .detail{
-
   width:90%;
 
-  margin:50px auto;
+  margin:40px auto;
 
   background:white;
 
-  padding:60px;
+  padding:50px;
 
-  border-radius:25px;
+  border-radius:20px;
 
-  box-shadow:0 5px 20px rgba(0,0,0,0.1);
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
 .detail h1{
+  color:#228b22;
 
   text-align:center;
 
-  color:#228b22;
+  margin-bottom:30px;
 
-  font-size:50px;
-
-  margin-bottom:40px;
+  font-size:45px;
 }
 
 .detail h2{
-
   color:#228b22;
 
-  margin-top:50px;
+  margin-top:40px;
 
   margin-bottom:20px;
 
-  font-size:35px;
-}
-
-.detail h3{
-
-  color:#2e8b57;
-
-  margin-top:30px;
-
-  font-size:28px;
+  font-size:32px;
 }
 
 .detail p{
-
   line-height:2;
 
-  font-size:19px;
-
-  margin-top:20px;
-}
-
-.detail ul{
-
-  margin-top:20px;
-
-  padding-left:30px;
-}
-
-.detail li{
-
-  line-height:2;
-
-  margin-top:10px;
+  margin-top:15px;
 
   font-size:18px;
 }
 
-/* FOTO BESAR */
+.detail ul{
+  padding-left:30px;
+
+  margin-top:20px;
+}
+
+.detail li{
+  margin-top:10px;
+
+  line-height:1.8;
+}
+
+/* FOTO */
+
+.foto-kecil{
+  width:70%;
+
+  height:300px;
+
+  object-fit:cover;
+
+  display:block;
+
+  margin:30px auto;
+
+  border-radius:15px;
+}
 
 .foto-besar{
-
   width:100%;
 
   height:500px;
@@ -282,21 +225,4 @@ nav a:hover{
   border-radius:20px;
 
   margin:30px 0;
-}
-
-/* FOTO CONTOH */
-
-.foto-kecil{
-
-  width:70%;
-
-  height:300px;
-
-  object-fit:cover;
-
-  border-radius:15px;
-
-  display:block;
-
-  margin:30px auto;
 }
