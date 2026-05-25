@@ -133,24 +133,36 @@ nav a:hover{
   transform:translateY(-10px);
 }
 
+/* FOTO CARD KECIL */
+
 .card img,
-.news-card img{
-  width:100%;
-  height:220px;
+.news-card img,
+.detail img{
+
+  width:180px;
+
+  height:120px;
+
   object-fit:cover;
-  border-radius:15px;
-  margin-bottom:15px;
+
+  border-radius:12px;
+
+  display:block;
+
+  margin:15px auto;
 }
 
 .card h3,
 .news-card h3{
   color:#2e8b57;
   margin-bottom:15px;
+  text-align:center;
 }
 
 .card p,
 .news-card p{
   line-height:1.8;
+  text-align:center;
 }
 
 /* BUTTON */
@@ -202,15 +214,15 @@ table tr:hover{
 
 .gallery img{
 
-  width:220px;
+  width:180px;
 
-  height:160px;
+  height:120px;
 
   object-fit:cover;
 
-  margin:15px;
+  margin:12px;
 
-  border-radius:15px;
+  border-radius:12px;
 
   transition:0.3s;
 }
@@ -271,34 +283,17 @@ table tr:hover{
 
 .foto-besar{
 
-  width:100%;
+  width:80%;
 
-  height:420px;
+  height:300px;
 
   object-fit:cover;
 
   border-radius:20px;
 
-  margin-top:20px;
-
-  margin-bottom:20px;
-}
-
-/* FOTO KECIL */
-
-.foto-kecil{
-
-  width:60%;
-
-  height:260px;
-
-  object-fit:cover;
-
   display:block;
 
   margin:25px auto;
-
-  border-radius:15px;
 }
 
 /* FOOTER */
@@ -332,11 +327,16 @@ footer{
     margin-top:10px;
   }
 
-  .foto-kecil{
-    width:100%;
-  }
-
   .detail{
     padding:30px;
+  }
+
+  .card img,
+  .news-card img,
+  .detail img{
+
+    width:140px;
+
+    height:100px;
   }
 }
