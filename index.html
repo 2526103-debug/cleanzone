@@ -1,348 +1,86 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CleanZone - Website Kebersihan Lingkungan</title>
+  <meta charset="UTF-8">
+  <title>CleanZone</title>
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family: Arial, sans-serif;
-    }
-
-    body{
-      background:#f4fff4;
-      color:#333;
-      line-height:1.6;
-    }
-
-    /* HEADER */
-    header{
-      background:linear-gradient(to right, #2e8b57, #4caf50);
-      color:white;
-      padding:20px 50px;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      position:sticky;
-      top:0;
-      z-index:1000;
-      box-shadow:0 2px 10px rgba(0,0,0,0.2);
-    }
-
-    .logo{
-      font-size:30px;
-      font-weight:bold;
-    }
-
-    nav a{
-      color:white;
-      text-decoration:none;
-      margin-left:20px;
-      font-weight:bold;
-      transition:0.3s;
-    }
-
-    nav a:hover{
-      color:#d4ffd4;
-    }
-
-    /* HERO */
-    .hero{
-      height:90vh;
-      background:url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80');
-      background-size:cover;
-      background-position:center;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      text-align:center;
-      color:white;
-      position:relative;
-    }
-
-    .hero::before{
-      content:'';
-      position:absolute;
-      width:100%;
-      height:100%;
-      background:rgba(0,0,0,0.45);
-    }
-
-    .hero-content{
-      position:relative;
-      z-index:1;
-      max-width:700px;
-      padding:20px;
-    }
-
-    .hero h1{
-      font-size:55px;
-      margin-bottom:20px;
-    }
-
-    .hero p{
-      font-size:20px;
-      margin-bottom:30px;
-    }
-
-    .btn{
-      background:#4caf50;
-      color:white;
-      padding:14px 28px;
-      text-decoration:none;
-      border-radius:30px;
-      font-weight:bold;
-      transition:0.3s;
-    }
-
-    .btn:hover{
-      background:#2e8b57;
-    }
-
-    /* SECTION */
-    section{
-      padding:70px 10%;
-    }
-
-    .title{
-      text-align:center;
-      margin-bottom:50px;
-    }
-
-    .title h2{
-      font-size:38px;
-      color:#2e8b57;
-      margin-bottom:10px;
-    }
-
-    /* CARDS */
-    .card-container{
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
-      gap:25px;
-    }
-
-    .card{
-      background:white;
-      padding:25px;
-      border-radius:15px;
-      box-shadow:0 5px 15px rgba(0,0,0,0.1);
-      transition:0.3s;
-    }
-
-    .card:hover{
-      transform:translateY(-10px);
-    }
-
-    .card h3{
-      color:#2e8b57;
-      margin-bottom:15px;
-    }
-
-    /* TABLE */
-    table{
-      width:100%;
-      border-collapse:collapse;
-      background:white;
-      box-shadow:0 5px 15px rgba(0,0,0,0.1);
-      border-radius:10px;
-      overflow:hidden;
-    }
-
-    table th{
-      background:#4caf50;
-      color:white;
-      padding:15px;
-    }
-
-    table td{
-      padding:15px;
-      text-align:center;
-      border-bottom:1px solid #ddd;
-    }
-
-    table tr:hover{
-      background:#f1fff1;
-    }
-
-    /* ABOUT */
-    .about{
-      background:#e8ffe8;
-      border-radius:20px;
-      padding:40px;
-      text-align:center;
-    }
-
-    /* FOOTER */
-    footer{
-      background:#2e8b57;
-      color:white;
-      text-align:center;
-      padding:20px;
-      margin-top:40px;
-    }
-
-    /* RESPONSIVE */
-    @media(max-width:768px){
-      .hero h1{
-        font-size:38px;
-      }
-
-      nav{
-        display:flex;
-        flex-wrap:wrap;
-      }
-
-      nav a{
-        margin-top:10px;
-      }
-    }
-
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- HEADER -->
   <header>
-    <div class="logo">🌿 CleanZone</div>
+
+    <div class="logo">
+      🌿 CleanZone
+    </div>
 
     <nav>
-      <a href="#beranda">Beranda</a>
-      <a href="#tips">Tips Kebersihan</a>
-      <a href="#jadwal">Jadwal Piket</a>
-      <a href="#tentang">Tentang Kami</a>
+      <a href="index.html">Beranda</a>
+      <a href="tips.html">Tips</a>
+      <a href="berita.html">Berita</a>
+      <a href="jadwal.html">Jadwal</a>
+      <a href="galeri.html">Galeri</a>
+      <a href="tentang.html">Tentang</a>
     </nav>
+
   </header>
 
-  <!-- HERO -->
-  <section class="hero" id="beranda">
-    <div class="hero-content">
-      <h1>Lingkungan Bersih, Sekolah Nyaman</h1>
-      <p>
-        Mari bersama menjaga kebersihan lingkungan sekolah 
-        demi kenyamanan belajar dan kesehatan bersama.
-      </p>
+  <section class="hero">
 
-      <a href="#tips" class="btn">Lihat Tips</a>
-    </div>
+    <h1>
+      Lingkungan Bersih,
+      Sekolah Nyaman
+    </h1>
+
+    <p>
+      Mari menjaga kebersihan sekolah
+      bersama CleanZone.
+    </p>
+
+    <a href="tips.html" class="btn">
+      Mulai Sekarang
+    </a>
+
   </section>
 
-  <!-- TIPS -->
-  <section id="tips">
-    <div class="title">
-      <h2>Tips Kebersihan</h2>
-      <p>Beberapa kebiasaan sederhana untuk menjaga lingkungan sekolah tetap bersih.</p>
-    </div>
+  <section class="fitur">
 
-    <div class="card-container">
-
-      <div class="card">
-        <h3>🗑 Buang Sampah</h3>
-        <p>
-          Biasakan membuang sampah pada tempatnya agar lingkungan sekolah tetap bersih dan nyaman.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>🧹 Piket Kelas</h3>
-        <p>
-          Laksanakan piket kelas sesuai jadwal agar ruang kelas selalu rapi dan sehat.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>🌱 Menanam Tanaman</h3>
-        <p>
-          Menanam tanaman dapat membuat lingkungan sekolah menjadi lebih hijau dan segar.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>💧 Hemat Air</h3>
-        <p>
-          Gunakan air seperlunya dan jangan lupa menutup keran setelah digunakan.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- JADWAL -->
-  <section id="jadwal">
-    <div class="title">
-      <h2>Jadwal Piket Kelas</h2>
-      <p>Jadwal kebersihan untuk menjaga kelas tetap nyaman.</p>
-    </div>
-
-    <table>
-      <tr>
-        <th>Hari</th>
-        <th>Petugas</th>
-        <th>Tugas</th>
-      </tr>
-
-      <tr>
-        <td>Senin</td>
-        <td>Kelompok 1</td>
-        <td>Menyapu & Mengepel</td>
-      </tr>
-
-      <tr>
-        <td>Selasa</td>
-        <td>Kelompok 2</td>
-        <td>Membersihkan Meja</td>
-      </tr>
-
-      <tr>
-        <td>Rabu</td>
-        <td>Kelompok 3</td>
-        <td>Merapikan Kelas</td>
-      </tr>
-
-      <tr>
-        <td>Kamis</td>
-        <td>Kelompok 4</td>
-        <td>Membuang Sampah</td>
-      </tr>
-
-      <tr>
-        <td>Jumat</td>
-        <td>Semua Siswa</td>
-        <td>Kerja Bakti Bersama</td>
-      </tr>
-    </table>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="tentang">
-    <div class="title">
-      <h2>Tentang Kami</h2>
-    </div>
-
-    <div class="about">
-      <p>
-        CleanZone adalah website edukasi yang dibuat untuk meningkatkan kesadaran siswa 
-        terhadap pentingnya menjaga kebersihan lingkungan sekolah.
-      </p>
-
-      <br>
+    <div class="card">
+      <h2>🌱 Peduli Lingkungan</h2>
 
       <p>
-        Dengan adanya website ini, diharapkan siswa dapat memiliki kebiasaan hidup bersih, 
-        disiplin, dan peduli terhadap lingkungan sekitar.
+        Belajar menjaga lingkungan
+        sejak dini.
       </p>
     </div>
+
+    <div class="card">
+      <h2>🗑 Kurangi Sampah</h2>
+
+      <p>
+        Biasakan membuang sampah
+        pada tempatnya.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>💧 Hemat Air</h2>
+
+      <p>
+        Gunakan air seperlunya.
+      </p>
+    </div>
+
   </section>
 
-  <!-- FOOTER -->
   <footer>
-    <p>© 2026 CleanZone | Website Pengingat Kebersihan Lingkungan</p>
+    <p>
+      © 2026 CleanZone
+    </p>
   </footer>
+
+  <script src="script.js"></script>
 
 </body>
 </html>
